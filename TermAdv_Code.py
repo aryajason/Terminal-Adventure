@@ -18,20 +18,21 @@ print("Level 1 : village curse\nA remote village has been struck by a mysterious
 HP = 100
 Village_Curse_HP = 200
 
+#Your Turn
 while HP > 0 and Village_Curse_HP > 0 :
   print("Choose Your Move Attack/Block/Heal")
   Move = int(input("Attack (1)\nBlock (2)\nHeal (3)\n> "))
   if Move == 1:
    Attack = random.randint(10,20)
    Village_Curse_HP = Village_Curse_HP - Attack
-   print(f"Enemy HP:{Village_Curse_HP}\n")
+   print(f"\nEnemy HP:{Village_Curse_HP}\n")
   elif Move == 2:
     Block = random.randint(5,15)
     print("You use blocked\n")
   elif Move == 3:
    Heal = random.randint(15,30)
    HP = HP + Heal
-   print(f"Health:{HP}\n")
+   print(f"HP:{HP}\n")
 
   #Enemy turn
   Village_Curse_Atk = random.randint(5,25)
@@ -53,4 +54,3 @@ while HP > 0 and Village_Curse_HP > 0 :
 
 print("Thank you for playing :>")
 
-  
